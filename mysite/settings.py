@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    # my apps
+    "loginapp",
 ]
 
 MIDDLEWARE = [
@@ -125,3 +128,8 @@ STATIC_ROOT = "/home/caretaker/mysite/static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+
+# added by me as instructed by presentation
+AUTH_USER_MODEL = "loginapp.User"
