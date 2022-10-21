@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate
 from django.shortcuts import render
 
 # Create your views here.
@@ -13,9 +14,13 @@ def register(request):
         # check wheter it's valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL
-            return HttpResponseRedirect('registration.html')
+            form.save()
+            username = form.cleaned_data['username']
+            email = form.cleaned_data['email']
+            user = authenticate(username=username, email=email)
+            return render(request, 'test.html', {'user': user})
+
+            # return HttpResponseRedirect('registration.html')
     # if a GET (or any other method) we'll create a blank form
     else:
         form = UserCreationForm()
