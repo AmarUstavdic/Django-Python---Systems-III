@@ -18,6 +18,7 @@ def register(request):
             username = form.cleaned_data['username']
             email = form.cleaned_data['email']
             user = authenticate(username=username, email=email)
+            check = "NOOOOOOOOOOOOOOOOOO!"
             if user:
                 check = "exists"
 
