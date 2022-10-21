@@ -18,7 +18,7 @@ def register(request):
             username = form.cleaned_data['username']
             email = form.cleaned_data['email']
             user = authenticate(username=username, email=email)
-            return render(request, 'test.html', {'user': user})
+            return render(request, 'test.html', {'username': username})
 
             # return HttpResponseRedirect('registration.html')
     # if a GET (or any other method) we'll create a blank form
