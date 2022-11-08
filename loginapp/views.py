@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponseRedirect
-from .forms import CustomUserCreationForm, UserChangeForm
+from .forms import CustomUserCreationForm, CustomUserChangeForm
 
 
 def register(request):
@@ -23,7 +23,7 @@ def register(request):
             # return HttpResponseRedirect('registration.html')
     # if a GET (or any other method) we'll create a blank form
     else:
-        form = UserCreationForm()
+        form = CustomUserChangeForm()
 
     return render(request, 'registration.html', {'form': form})
 
