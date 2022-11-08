@@ -3,14 +3,13 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponseRedirect
-from .forms import UserCreationForm, UserChangeForm
+from .forms import CustomUserCreationForm, UserChangeForm
 
 
 def register(request):
-    # if this is a post then we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         # check wheter it's valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required
