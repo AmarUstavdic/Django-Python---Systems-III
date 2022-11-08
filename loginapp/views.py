@@ -20,7 +20,6 @@ def register(request):
 
             return render(request, 'test.html', {'username': username})
 
-            # return HttpResponseRedirect('registration.html')
     # if a GET (or any other method) we'll create a blank form
     else:
         form = CustomUserChangeForm()
