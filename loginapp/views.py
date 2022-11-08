@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponseRedirect
-from .forms import UserCreationForm
+from .forms import UserCreationForm, UserChangeForm
 
 
 def register(request):
