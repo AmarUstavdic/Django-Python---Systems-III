@@ -30,12 +30,10 @@ def register(request):
 
 
 def home_view(request):
-
     return render(request, 'home.html')
 
 
 @login_required()
 def profile_view(request):
-
     return render(request, 'registration/renderme.html')
 
