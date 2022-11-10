@@ -16,7 +16,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -27,9 +26,8 @@ SECRET_KEY = "django-insecure-d1@mewigvrh%_y+)_+6u#%q7+z*oszkdlkc7_m$#ak)st%z#d0
 DEBUG = True
 
 ALLOWED_HOSTS = [
-     "caretaker.eu.pythonanywhere.com",
-    ]
-
+    "caretaker.eu.pythonanywhere.com",
+]
 
 # Application definition
 
@@ -75,7 +73,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "mysite.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -88,7 +85,6 @@ DATABASES = {
         "HOST": "caretaker.mysql.eu.pythonanywhere-services.com",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -108,7 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -120,21 +115,18 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
 STATIC_ROOT = "/home/caretaker/mysite/static/"
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-
-
 # added by me as instructed by presentation
 AUTH_USER_MODEL = "loginapp.User"
 LOGIN_REDIRECT_URL = "home"
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
