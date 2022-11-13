@@ -1,11 +1,7 @@
 from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
-
-# Create your views here.
-from django.http import HttpResponseRedirect
 from .forms import CustomUserCreationForm, CustomUserChangeForm
-
 
 def register(request):
     if request.method == 'POST':
@@ -26,7 +22,6 @@ def register(request):
         form = CustomUserChangeForm()
 
     return render(request, 'registration.html', {'form': form})
-
 
 
 def home_view(request):
